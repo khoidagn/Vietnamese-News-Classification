@@ -11,20 +11,31 @@ Dự án phân loại tin tức tiếng Việt tự động sử dụng các thu
 1. Tiền xử lý: Loại bỏ các bài viết trùng lặp, xử lý dữ liệu thiếu, lọc bài viết quá ngắn và thực hiện tách từ (Tokenization).
 2. Biểu diễn dữ liệu: Chuyển đổi văn bản sang dạng vector bằng phương pháp TF-IDF.
 3. Trực quan hóa: Sử dụng các kỹ thuật giảm chiều dữ liệu PCA, t-SNE và UMAP để phân tích các cụm chủ đề.
-![Trực quan hóa dữ liệu bằng UMAP](./images/Umap.png)
-*Hình 1: Phân tách các cụm chủ đề rõ rệt thông qua kỹ thuật UMAP 2D.*
+<p align="center">
+  <img src="./images/Umap.png" alt="Trực quan hóa dữ liệu bằng UMAP" width="600">
+  <br>
+  <sup><i>Hình 1: Phân tách các cụm chủ đề rõ rệt thông qua kỹ thuật UMAP 2D.</i></sup>
+</p>
 
 ## Kết quả mô hình
 Dự án so sánh hiệu năng của 3 mô hình chính:
-[Biểu đồ so sánh hiệu năng 3 mô hình](images/sosanh.png)
-*Hình 2: So sánh chỉ số Precision, Recall và F1-score giữa SVM, Naive Bayes và ANN.*
+<p align="center">
+  <img src="./images/sosanh.png" alt="So sánh hiệu năng 3 mô hình" width="700">
+  <br>
+  <sup><i>Hình 2: So sánh chỉ số Precision, Recall và F1-score giữa SVM, Naive Bayes và ANN.</i></sup>
+</p>
+
 | Mô hình | Accuracy | Đặc điểm |
 | :--- | :--- | :--- |
 | Naive Bayes | 89.31% | Đơn giản, tốc độ huấn luyện và dự đoán rất nhanh. |
 | SVM (Linear) | 93.96% | Đạt độ chính xác cao nhất, hoạt động ổn định trên dữ liệu văn bản. |
 | ANN | 93.07% | Khả năng học các quan hệ phi tuyến và đặc trưng ngữ nghĩa tốt. |
-![Ma trận nhầm lẫn của mô hình SVM](./images/SVM-CM.png)
-*Hình 3: Confusion Matrix của mô hình SVM - mô hình đạt hiệu quả cao nhất.*
+
+<p align="center">
+  <img src="./images/SVM-CM.png" alt="Ma trận nhầm lẫn của mô hình SVM" width="500">
+  <br>
+  <sup><i>Hình 3: Confusion Matrix của mô hình SVM - mô hình đạt hiệu quả cao nhất.</i></sup>
+</p>
 
 ## Hướng phát triển
 * Tích hợp các mô hình ngôn ngữ tiền huấn luyện như PhoBERT hoặc FastText.
